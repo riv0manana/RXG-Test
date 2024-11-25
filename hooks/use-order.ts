@@ -1,4 +1,4 @@
-import { signal} from '@preact/signals-react';
+import { signal, computed} from '@preact/signals-react';
 import { useSignals } from '@preact/signals-react/runtime';
 import { useEffect } from 'react';
 
@@ -17,17 +17,16 @@ type OrderInfo = {
 }
 
 type OrderStore = {
-    info?: OrderInfo,
     item?: Coupon,
-    total?: number,
-    quatity?: number,
-    paid?: boolean;
-    step?: number;
     selectedPrice?: number;
 }
 
-const order = signal<OrderStore>({})
-const step = signal<number>(3);
+const order = signal<Coupon>()
+const step = signal<number>(0);
+const info = signal<OrderInfo>();
+const quatity = signal<number>(1);
+const price = signal<number>();
+const total = computed(() => (price.value || order.value?.price || 0) * (quatity.value || 1));
 
 const useOrder = (item?: Coupon) => {
     useSignals();
@@ -35,43 +34,41 @@ const useOrder = (item?: Coupon) => {
     const setStep = (value: number) => step.value = value;
 
     const addQty = () => {
-        if (order.value.quatity) {
-            order.value.quatity += 1;
-        } else {
-            order.value.quatity === 1;
-        }
+        quatity.value += 1;
     }
 
     const reduceQty = () => {
-        if (order.value.quatity && order.value.quatity > 0) {
-            order.value.quatity -= 1;
+        if (quatity.value > 0) {
+            quatity.value -= 1;
         }
     }
 
     const setPrice = (value: number) => {
-        order.value.selectedPrice = value;
+        price.value = value;
     }
 
     const saveOrderTotal = () => {
-        order.value.total = (order.value.selectedPrice || order.value.item?.price || 0) * (order.value.quatity || 1);
         setStep(1);
     }
 
-    const saveOrderInfo = (info: OrderInfo) => {
-        order.value.info = info;
+    const saveOrderInfo = (value: OrderInfo) => {
+        info.value = value;
     }
 
     useEffect(() => {
-        if (item && !order.value.item) {
-            order.value.item = item;
+        if (item && !order.value) {
+            order.value = item;
         }
-    }, [item, order.value.item])
+    }, [item, order.value])
 
     return {
-        order: order.value,
+        quatity: quatity.value,
+        info: info.value,
+        price: price.value,
+        total: total.value,
+        step: step.value,
         setStep,
         setPrice,
-        step: step.value,
         reduceQty,
         addQty,
         saveOrderTotal,

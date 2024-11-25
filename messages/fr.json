@@ -46,7 +46,8 @@
                     "total": "Total: {total}€",
                     "without-wine": "(hors boisson)",
                     "with-wine": "avec vins (hors apéro & café)",
-                    "pax": "Pour {pax, plural, =1 {# personne} other {# personnes}}"
+                    "pax": "Pour {pax, plural, =1 {# personne} other {# personnes}}",
+                    "order": "Commander"
                 }
             }
         },
