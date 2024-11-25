@@ -12,15 +12,17 @@ const Stepper = ({
     coupon
 }: StepperProps) => {
     const { step } = useOrder(coupon)
-    
-    switch(step) {
-        case 0:
-            return <CouponDetail item={coupon}/>
+
+    switch (step) {
         case 1:
             return <CouponForm />;
+        case 2:
+            return <div className="flex justify-center">Pending</div>
+        case 3:
+            return <div className="flex justify-center">Pending</div>
         case 0:
         default:
-            return <CouponDetail item={coupon}/>;
+            return <CouponDetail item={coupon} />;
     }
 }
 
