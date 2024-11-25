@@ -1,0 +1,590 @@
+{
+    "Common": {
+        "app": {
+            "name": "RXG Test",
+            "url": "https://localhost/"
+        },
+        "zod": {
+            "min": "Doit contenir au moins {min} charactères",
+            "max": "Doit contenir {max} charactères au maximum",
+            "password": {
+                "min": "La valeur minimum est de ${min}",
+                "max": "La valeur maximum est de ${max}",
+                "minus": "Doit contenir au moins un charactère minuscule",
+                "capital": "Doit contenir au moins un charactère Majuscule",
+                "number": "Doit contenir au moins un chiffre",
+                "special": "Doit contenir au moins un charactère spécial",
+                "not-match": "Les deux mot de passe ne correspondent pas"
+            },
+            "phone": "Le N° de téléphone est invalide",
+            "email": "Email invalide",
+            "required": "Veuillez remplir ce champ",
+            "xss": "Fraude XSS detectée",
+            "url": "Image url invalide",
+            "NaN": "Valeur invalide"
+        }
+    },
+    "Public": {
+        "Home": {
+            "pageTitle": "Nos coupon | {appName}",
+            "pageDescription": "Site de démo: Fastfood en ligne, créer avec MgCMS",
+            "keywords": "Food store, healthy food, e-commerce, online store, online food order, online cms"
+        },
+        "CouponPage": {
+            "pageTitle": "Coupon - Type: {type} | {appName}",
+            "ogTitle": "Suivi Commande | {appName}",
+            "pageDescription": "Suivre ma commande en ligne facilement",
+            "keywords": "Food store, healthy food, e-commerce, online store, online food order, online cms",
+            "content": {
+                "title": "Suivre ma commande",
+                "phrase": "Merci pour votre fidélité."
+            }
+        }
+    },
+    "components": {
+        "templates": {
+            "TNewestProduct": {
+                "title": "Fraîchement ajoutés",
+                "basketBtn": "J'en profite"
+            },
+            "TRecommendedProduct": {
+                "title": "Nos recommandations",
+                "basketBtn": "J'en profite"
+            }
+        },
+        "organisms": {
+            "AgentAddBtn": {
+                "dialog": {
+                    "title": "Ajouter un agent de livraison"
+                },
+                "label": "Nouveau"
+            },
+            "AgentEditBtn": {
+                "dialog": {
+                    "title": "Edition - {name}"
+                }
+            },
+            "AgentDeleteBtn": {
+                "dialog": {
+                    "title": "Agent: {name}",
+                    "confirm": "Supprimer",
+                    "cancel": "Annuler"
+                },
+                "toast": {
+                    "error": {
+                        "title": "Impossible de supprimer l'agent",
+                        "description": "Réessayer plus tard"
+                    },
+                    "success": {
+                        "title": "Agent supprimé"
+                    }
+                }
+            },
+            "AgentTable": {
+                "title": "Agent de livraison",
+                "search": {
+                    "placeholder": "Entrez pour rechercher"
+                },
+                "table": {
+                    "name": "Noms",
+                    "phone": "N° de Tel",
+                    "address": "Adresse",
+                    "transport": "Mode",
+                    "gps_id": "GPS",
+                    "action": "Actions"
+                }
+            },
+            "ProductListing": {
+                "title": "Tous nos produits",
+                "basketBtn": "Ajouter au panier"
+            },
+            "ProductAddBtn": {
+                "dialog": {
+                    "title": "Nouveau produit"
+                },
+                "label": "Nouveau"
+            },
+            "ProductEditBtn": {
+                "dialog": {
+                    "title": "Edition - {name}"
+                }
+            },
+            "ProductDeleteBtn": {
+                "dialog": {
+                    "title": "Suppression: {name}",
+                    "confirm": "Supprimer",
+                    "cancel": "Annuler"
+                },
+                "toast": {
+                    "error": {
+                        "title": "Impossible de supprimer",
+                        "description": "Réessayer plus tard"
+                    },
+                    "success": {
+                        "title": "Produit supprimé"
+                    }
+                }
+            },
+            "ProductTable": {
+                "title": "Tableau de produits",
+                "search": {
+                    "placeholder": "Entrez pour rechercher"
+                },
+                "table": {
+                    "img": "Image",
+                    "name": "Nom",
+                    "description": "Description",
+                    "price": "Prix",
+                    "action": "Actions"
+                }
+            },
+            "OrderTable": {
+                "title": "Tableau de commandes",
+                "search": {
+                    "placeholder": "Entrez pour rechercher"
+                },
+                "table": {
+                    "phone": "N° de Tel",
+                    "payRef": "Référence",
+                    "clientName": "Client",
+                    "details": "Détails",
+                    "total": "Total",
+                    "status": "Statut",
+                    "date": "Commande du",
+                    "agent": "Livreur",
+                    "action": "Actions"
+                }
+            },
+            "PublicHeader": {
+                "sr-btn": {
+                    "cart": "Mon Panier",
+                    "tracking": "Suive ma commande"
+                }
+            },
+            "AdminHeader": {
+                "sr-btn": {
+                    "products": "Gestion des produits",
+                    "orders": "Gestion des commandes"
+                }
+            }
+        },
+        "molecules": {
+            "BootstrapConfigButton": {
+                "label": "Démarrer",
+                "inProgress": "en cours",
+                "toast": {
+                    "error": {
+                        "title": "Imposible de mettre à jour le status",
+                        "description": "Verifier vos configurations"
+                    },
+                    "success": {
+                        "title": "Configuration terminée",
+                        "description": "Vous allez être redirigé"
+                    }
+                }
+            },
+            "OrderBasket": {
+                "title": "Mon Panier",
+                "empty": {
+                    "phrase": "Votre panier est vide, choisissez un ou des produits"
+                }
+            },
+            "OrderForm": {
+                "toast": {
+                    "error": {
+                        "title": "Impossible de commander",
+                        "description": "Verifier vos données"
+                    },
+                    "success": {
+                        "title": "Commande envoyée",
+                        "description": "Vous allez être redirigé"
+                    }
+                },
+                "form": {
+                    "clientName": {
+                        "label": "Noms *",
+                        "placeholder": "Votre noms"
+                    },
+                    "clientNumber": {
+                        "label": "N° Tel *",
+                        "placeholder": "Numéro Tel."
+                    },
+                    "clientAddress": {
+                        "label": "Adresse *",
+                        "placeholder": "Votre adresse exacte"
+                    },
+                    "details": {
+                        "label": "Autre information (optionnel)",
+                        "placeholder": "Autre détails utiles pour la livraison"
+                    },
+                    "submit": {
+                        "label": "Je commande"
+                    }
+                }
+            },
+            "ActionModal": {
+                "defaultLabel": "Confirm",
+                "cancel": "Annuler"
+            },
+            "AgentForm": {
+                "toast": {
+                    "edit": {
+                        "error": {
+                            "title": "Edition non effectuée",
+                            "description": "Verifier les données"
+                        },
+                        "success": {
+                            "title": "Mise à jour effectuée"
+                        }
+                    },
+                    "add": {
+                        "error": {
+                            "title": "Impossible d'ajouter",
+                            "description": "Verifier les données"
+                        },
+                        "success": {
+                            "title": "Agent ajouté"
+                        }
+                    }
+                },
+                "form": {
+                    "name": {
+                        "label": "Nom *",
+                        "placeholder": "Noms complet de l'agent"
+                    },
+                    "phone": {
+                        "label": "N° Tel *",
+                        "placeholder": "Numéro Téléphone"
+                    },
+                    "address": {
+                        "label": "Adresse *",
+                        "placeholder": "Adresse exacte"
+                    },
+                    "gps_id": {
+                        "label": "ID/IMEI GPS",
+                        "placeholder": "(Optionnel, lier un gps)"
+                    },
+                    "transport": {
+                        "label": "Type de transport *",
+                        "placeholder": "Choisissez un transport"
+                    },
+                    "submit": {
+                        "label": "Sauvegarder"
+                    }
+                }
+            },
+            "ProductForm": {
+                "toast": {
+                    "edit": {
+                        "error": {
+                            "title": "Edition non effectuée",
+                            "description": "Verifier les données"
+                        },
+                        "success": {
+                            "title": "Mise à jour effectuée"
+                        }
+                    },
+                    "add": {
+                        "error": {
+                            "title": "Impossible d'ajouter",
+                            "description": "Verifier les données"
+                        },
+                        "success": {
+                            "title": "Produit ajouté"
+                        }
+                    }
+                },
+                "form": {
+                    "name": {
+                        "label": "Nom *",
+                        "placeholder": "Donnez un nom au produit"
+                    },
+                    "sku": {
+                        "label": "sku *",
+                        "placeholder": "Identification unique du produit"
+                    },
+                    "price": {
+                        "label": "Prix *",
+                        "placeholder": "Tapez un montant"
+                    },
+                    "description": {
+                        "label": "Description *",
+                        "placeholder": "Décrivez votre produit"
+                    },
+                    "promoted": {
+                        "label": "Recommander?",
+                        "description": "Ajouter dans les recommandées"
+                    },
+                    "submit": {
+                        "label": "Sauvegarder"
+                    }
+                }
+            },
+            "BasicPayForm": {
+                "toast": {
+                    "error": {
+                        "title": "Erreur lors du paiement",
+                        "description": "Verifier la Rérérence"
+                    },
+                    "success": {
+                        "title": "Référence ajoutée"
+                    }
+                },
+                "form": {
+                    "payRef": {
+                        "label": "Référence de paiement",
+                        "placeholder": "Entrer la référence du paiement"
+                    },
+                    "submit": {
+                        "label": "Confirmer"
+                    }
+                }
+            },
+            "PayRefForm": {
+                "toast": {
+                    "error": {
+                        "title": "Référence non trouvée",
+                        "description": "Verifier votre Rérérence de paiement"
+                    },
+                    "success": {
+                        "title": "Référence valide",
+                        "description": "Vous allez être redirigé"
+                    }
+                },
+                "form": {
+                    "payRef": {
+                        "label": "Référence de paiement",
+                        "placeholder": "Entrer la référence du paiement"
+                    },
+                    "submit": {
+                        "label": "Voir ma commande"
+                    }
+                }
+            },
+            "OrderTracker": {
+                "label": "Commande n° {id}"
+            },
+            "ResetPasswordForm": {
+                "title": "Espace Administration",
+                "description": "Créer un nouveau mot de passe pour continuer",
+                "toast": {
+                    "error": {
+                        "title": "Imposible de créer le mot de passe",
+                        "description": "Le token est invalide ou éxpiré"
+                    },
+                    "success": {
+                        "title": "Nouveau mot de passe créé",
+                        "description": "Vous allez être redirigé"
+                    }
+                },
+                "form": {
+                    "password": {
+                        "label": "Mot de passe *",
+                        "placeholder": "Votre mot de passe"
+                    },
+                    "submit": {
+                        "label": "Valider"
+                    }
+                }
+            },
+            "InitPasswordResetForm": {
+                "title": "Espace Administration",
+                "description": "Entrez votre email pour recevoir un lien de réinitialisation",
+                "toast": {
+                    "error": {
+                        "title": "Impossible d'envoyer le lien",
+                        "description": "Vérifier votre email"
+                    },
+                    "success": {
+                        "title": "Lien de réinitialisation envoyé",
+                        "description": "Vous allez recevoir le lien de réinitialisation"
+                    }
+                },
+                "form": {
+                    "email": {
+                        "label": "Email *",
+                        "placeholder": "email@example.com"
+                    },
+                    "submit": {
+                        "label": "Réinitialiser"
+                    }
+                }
+            },
+            "LoginForm": {
+                "title": "Espace Administration",
+                "description": "Identifiez-vous avec votre email et mot de passe",
+                "toast": {
+                    "error": {
+                        "title": "Impossible de s'authentifier",
+                        "description": "Vérifier votre email/mot de passe"
+                    },
+                    "success": {
+                        "title": "Vous être authentifié",
+                        "description": "Vous allez être redirigé"
+                    }
+                },
+                "form": {
+                    "email": {
+                        "label": "Email *",
+                        "placeholder": "email@example.com"
+                    },
+                    "password": {
+                        "label": "Mot de passe *",
+                        "placeholder": "Votre mot de passe"
+                    },
+                    "submit": {
+                        "label": "S'authentifier"
+                    }
+                },
+                "link": {
+                    "forgot": {
+                        "label": "Mot de passe perdu"
+                    }
+                }
+            },
+            "SignUpForm": {
+                "title": "Espace Administration",
+                "description": "Créer votre compte",
+                "toast": {
+                    "error": {
+                        "title": "Impossible de créer le compte",
+                        "description": "Vérifier votre email/mot de passe"
+                    },
+                    "success": {
+                        "title": "Votre compte administrateur à été créer",
+                        "description": "Vous allez être redirigé"
+                    }
+                },
+                "form": {
+                    "email": {
+                        "label": "Email *",
+                        "placeholder": "email@example.com"
+                    },
+                    "password": {
+                        "label": "Mot de passe *",
+                        "placeholder": "Votre mot de passe"
+                    },
+                    "name": {
+                        "label": "Noms *",
+                        "placeholder": "Votre noms"
+                    },
+                    "submit": {
+                        "label": "Créer le compte"
+                    }
+                },
+                "link": {
+                    "forgot": {
+                        "label": "Mot de passe perdu"
+                    }
+                }
+            },
+            "BasketButton": {
+                "sr-btn": "Mon panier",
+                "sr-title": "Mon panier",
+                "sr-description": "Détail de votre panier"
+            },
+            "Footer": {
+                "address": "St Fiction 43Rd",
+                "email": "contact@riv0manana.dev",
+                "phone": "03X XX XXX XX",
+                "copy": "MgCMS © 2024 <link>riv0manana.dev</link>",
+                "copy-link": "https://riv0manana.dev",
+                "publisher": "Site réalisé par Agence Publika."
+            },
+            "OrderAssignAgent": {
+                "toast": {
+                    "error": {
+                        "title": "Impossible d'assigner un livreur",
+                        "description": "Livreur indisponible"
+                    },
+                    "success": {
+                        "title": "Livreur assigné"
+                    }
+                }
+            },
+            "OrderStatusUpdate": {
+                "toast": {
+                    "error": {
+                        "title": "Imposible de mettre à jour le status"
+                    },
+                    "success": {
+                        "title": "Status à jour"
+                    }
+                }
+            }
+        },
+        "atoms": {
+            "OrderStatusFilter": {
+                "all": "Toutes",
+                "placeholder": "Changer le status"
+            },
+            "AgentSelectFilter": {
+                "placeholder": "Choisir le livreur"
+            },
+            "ShortOrderDetails": {
+                "title": "Details de la commande:",
+                "subtitle": "N° {id}",
+                "resume": {
+                    "estimation": "Temps d'attente estimé: {value} min"
+                },
+                "links": {
+                    "track": "Suivre",
+                    "home": "Catalogue"
+                }
+            },
+            "Uploader": {
+                "loading": "Ajout en cours",
+                "label": "Ajouter une image",
+                "toast": {
+                    "error": {
+                        "title": "Impossible d'uploader l'image",
+                        "description": "Verifier le fichier/image"
+                    },
+                    "success": {
+                        "title": "Fichier/Image ajouté"
+                    }
+                }
+            },
+            "BasicPaymentWrapper": {
+                "phrase": "Merci de payer la somme de {amount} à:",
+                "num": "N°/email:",
+                "name": "Au noms de:"
+            },
+            "BasketSummary": {
+                "title": "Montant",
+                "total": "Total"
+            },
+            "LogoutButton": {
+                "logout": "Déconnection"
+            },
+            "PaginatedListing": {
+                "button": {
+                    "label": "Voir plus"
+                }
+            },
+            "AgentInfo": {
+                "title": "Agent de livraison"
+            },
+            "VanillaPayBtn": {
+                "label": "Payer"
+            },
+            "BankCardLogo": {
+                "label": "Paiement sécurisé:"
+            },
+            "FooterLink": {
+                "legal": {
+                    "label": "Mentions légales",
+                    "link": "/legal"
+                },
+                "privacy-policy": {
+                    "label": "Politiques de confidentialité",
+                    "link": "/privacy-policy"
+                },
+                "cgu": {
+                    "label": "Conditions générales de ventes",
+                    "link": "/cgu"
+                }
+            }
+        }
+    }
+}
