@@ -75,6 +75,7 @@ const useOrder = (item?: Coupon) => {
         reduceQty,
         addQty,
         saveOrderTotal,
+        saveOrderInfo
     }
 }
 
