@@ -28,17 +28,12 @@
         "Home": {
             "pageTitle": "Nos coupon | {appName}",
             "pageDescription": "Site de démo: Fastfood en ligne, créer avec MgCMS",
-            "keywords": "Food store, healthy food, e-commerce, online store, online food order, online cms"
+            "keywords": "bon d'achat, coupon code"
         },
         "CouponPage": {
-            "pageTitle": "Coupon - Type: {type} | {appName}",
-            "ogTitle": "Suivi Commande | {appName}",
-            "pageDescription": "Suivre ma commande en ligne facilement",
-            "keywords": "Food store, healthy food, e-commerce, online store, online food order, online cms",
-            "content": {
-                "title": "Suivre ma commande",
-                "phrase": "Merci pour votre fidélité."
-            }
+            "pageTitle": "{couponName} | {appName}",
+            "pageDescription": "{description}",
+            "keywords": "bon d'achat, coupon code"
         }
     },
     "components": {
@@ -181,6 +176,15 @@
                 "pax": "Pour {pax, plural, =1 {# personne} other {# personnes}}",
                 "startAt": "À partir de",
                 "price": "{price}€"
+            },
+            "TimelineBanner": {
+                "items": {
+                    "gift": "Choisissez un bon",
+                    "info": "Informations sur le bon",
+                    "payment": "Paiement",
+                    "print": "Imprimer votre bon"
+
+                }
             }
         },
         "atoms": {

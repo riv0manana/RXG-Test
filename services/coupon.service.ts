@@ -1,3 +1,4 @@
+import { parseSlug } from '@/lib/utils';
 import Coupons from '@/services/mock/coupons.json'
 
 class CouponService {
@@ -8,6 +9,10 @@ class CouponService {
             total,
             data
         } 
+    }
+
+    static getCouponsBySlug = async (slug: string): Promise<Coupon | undefined> => {
+        return Coupons.find(item => parseSlug(item.title) === slug);
     }
 }
 

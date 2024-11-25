@@ -1,4 +1,4 @@
-import { FetchCoupon } from "@/services/actions/coupon.action"
+import { FetchCoupons } from "@/services/actions/coupon.action"
 import CouponListing from "@/components/organisms/CouponListing/CouponListing"
 
 export type TCouponListingProps = {
@@ -10,7 +10,7 @@ const TCouponListing = async ({
     offset = 0,
     limit = 6
 }: TCouponListingProps) => {
-    const [, res] = await FetchCoupon(offset, limit)
+    const [, res] = await FetchCoupons(offset, limit)
     return (
         <CouponListing items={res?.data} total={res?.total} />
     )

@@ -7,6 +7,7 @@
 
 import { cn } from '@/lib/utils';
 import Image, { ImageProps } from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 
 
@@ -15,11 +16,13 @@ const Logo = ({
     ...props
 }: Omit<ImageProps, 'src' | 'alt'>) => {
     return (
-        <Image {...props}
-            className={cn('h-auto', className)} width={505} height={152}
-            src='/assets/img/logo.svg'
-            alt='Logo'
-        />
+        <Link href="/" aria-label='Logo'>
+            <Image {...props}
+                className={cn('h-auto', className)} width={505} height={152}
+                src='/assets/img/logo.svg'
+                alt='Logo'
+            />
+        </Link>
     )
 }
 

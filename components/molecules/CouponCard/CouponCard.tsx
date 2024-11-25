@@ -10,7 +10,7 @@ export type CouponCardProps = {
     isLCP?: boolean;
 }
 
-const CouponCard = async ({
+const CouponCard = ({
     item,
     className,
     isLCP

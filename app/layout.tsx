@@ -9,6 +9,8 @@ import "@/app/globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
+
+
 export async function generateMetadata() {
   const app = await getTranslations('Common.app');
   const t = await getTranslations('Public.Home');

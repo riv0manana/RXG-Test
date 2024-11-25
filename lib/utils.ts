@@ -96,3 +96,5 @@ export const deepCompareObject = <T>(first?: T, second?: T) => {
     return false;
   }
 }
+
+export const parseSlug = (value: string) => value.toLowerCase().replaceAll(' ', '-')
