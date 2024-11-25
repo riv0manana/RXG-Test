@@ -49,6 +49,44 @@
                     "pax": "Pour {pax, plural, =1 {# personne} other {# personnes}}",
                     "order": "Commander"
                 }
+            },
+            "CouponForm": {
+                "breadcrumb": "Revenir aux informations sur le bon",
+                "title": "Compléter le formulaire <span>&</span> Recevez immédiatement votre bon cadeau!",
+                "box": {
+                    "identity": "Identité de l’acheteur du bon cadeau:",
+                    "info-to": "Informations présentes sur le bon cadeau:",
+                    "models": "Choisir un modèle:"
+                },
+                "form": {
+                    "email": {
+                        "label": "Email *",
+                        "placeholder": "exemple@email.fr"
+                    },
+                    "postalCode": {
+                        "label": "Adresse",
+                        "placeholder": "Entrer votre addresse"
+                    },
+                    "address": {
+                        "label": "Code Postal",
+                        "placeholder": "Entrer votre code postal"
+                    },
+                    "city": {
+                        "label": "Ville",
+                        "placeholder": "Entrer votre ville"
+                    },
+                    "name": {
+                        "label": "Pour *",
+                        "placeholder": "Nom de la personne qui reçoit"
+                    },
+                    "fromName": {
+                        "label": "De la Part de *",
+                        "placeholder": "Nom de la personne qui offre"
+                    },
+                    "submit": {
+                        "label": "Valider et Payer"
+                    }
+                }
             }
         },
         "molecules": {

@@ -43,3 +43,17 @@ export const zodPhone = (t?: any) => safeString(zodString(t)
     .regex(/^0\d{9}$/, { message: t?.('phone') }), t);
 
 
+export const orderForm = (t?: any) => z.object({
+    model: z.coerce.number({ message: t?.('NaN') }),
+    from: z.object({
+        email: safeString(zodString(t)
+            .email(t?.('email')), t),
+        postalCode: safeOptionalString(zodOptionalString(), t),
+        address: safeOptionalString(zodOptionalString(), t),
+        city: safeOptionalString(zodOptionalString(), t),
+    }),
+    to: z.object({
+        name: safeString(zodString(t), t),
+        fromName: safeString(zodString(t), t),
+    })
+})

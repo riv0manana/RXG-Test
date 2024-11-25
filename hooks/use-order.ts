@@ -3,7 +3,7 @@ import { useSignals } from '@preact/signals-react/runtime';
 import { useEffect } from 'react';
 
 type OrderInfo = {
-    model: 1 | 2 | 3;
+    model: number;
     from: {
         email: string;
         postalCode?: string;
@@ -53,6 +53,7 @@ const useOrder = (item?: Coupon) => {
 
     const saveOrderInfo = (value: OrderInfo) => {
         info.value = value;
+        setStep(2);
     }
 
     useEffect(() => {
