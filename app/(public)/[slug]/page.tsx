@@ -4,6 +4,7 @@
  * Description: Interview test - React / Next.JS - For Rouge Hexagone
  */
 
+import CouponDetail from "@/components/organisms/CouponDetail/CouponDetail";
 import { FetchCoupons, FetchCouponSlug } from "@/services/actions/coupon.action";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
@@ -56,7 +57,7 @@ export default async function CouponPage({
 
   return (
     <>
-    {coupon.title}
+      <CouponDetail item={coupon} />
     </>
 
   );

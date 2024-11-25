@@ -18,7 +18,7 @@ const CouponCard = ({
     const t = useTranslations('components.molecules.CouponCard')
 
     return (
-        <li className={cn("list-none w-full max-w-[385px] h-[520px] rounded-[20px] border border-custom-lightgray hover:border-none transition-all ease-in-out bg-white hover:shadow-[0px_60px_50px_#0000001A]", className)}>
+        <li className={cn("list-none w-full max-w-[385px] h-[520px] rounded-[20px] border border-custom-lightgray hover:border-white transition-all ease-in-out bg-white hover:shadow-[0px_60px_50px_#0000001A]", className)}>
             <Image
             loading={isLCP ? 'eager' : 'lazy'}
             priority={isLCP}
@@ -31,7 +31,7 @@ const CouponCard = ({
             <div className="flex flex-col items-center gap-4 px-[30px] pt-6">
                 <h3 className="text-main-600 text-[22px] font-medium leading-[26px]">{item.title}</h3>
                 <p className="line-clamp-3 text-ellipsis overflow text-center text-custom-black">{item.description}</p>
-                <div className="flex items-center justify-center gap-[10px] bg-main-400 font-bold mb-7 text-main-700 leading-[19px] w-full h-[30px]">
+                <div className="flex items-center justify-center gap-[10px] bg-main-400 font-bold text-main-700 leading-[19px] w-full h-[30px]">
                     <Gift className="h-5 text-main-600" />
                     <span>{t('startAt')}</span> 
                     <span className="text-[20px]">{t('price', { price: formatAmount(item.price)})}</span> 
