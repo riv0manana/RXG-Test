@@ -23,12 +23,12 @@ const Footer = ({
 }: FooterProps) => {
     const t = useTranslations('components.molecules.Footer');
     return (
-        <footer className={cn("container py-8 text-[13px] leading-[15px] space-y-[14px]", className)}>
+        <footer className={cn("container py-8 text-[13px] leading-[15px] space-y-[14px] mb-4", className)}>
             <div className="flex flex-col lg:flex-row md:justify-between items-center border-y border-main-500 py-[30px] gap-5">
                 <Logo className="w-[200px]" />
                 <div className="flex flex-col gap-[38px] md:flex-row md:justify-between items-center">
                     <BankCardLogo />
-                    <span className="hidden sm:inline h-8 border-l border-main-600"></span>
+                    <span className="hidden md:inline h-8 border-l border-main-600"></span>
                     <SocialLinks />
                 </div>
             </div>

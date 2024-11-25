@@ -6,11 +6,13 @@
 
 
 import Footer from '@/components/molecules/Footer/Footer'
+import Header from '@/components/molecules/Header/Header'
 import { ReactNode } from 'react'
 
 const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
+      <Header />
       <main className="container">
         {children}
       </main>
