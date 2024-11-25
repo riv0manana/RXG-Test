@@ -33,10 +33,10 @@ export const isFormSafe = <T extends z.AnyZodObject>(data: any, form: T) => {
   }
 }
 
-export function formatAmount(amount: number, currency = 'Ar'): string {
+export function formatAmount(amount: number): string {
   return `${amount.toLocaleString('fr-Fr', {
     minimumFractionDigits: 2,
-  })} ${currency}`
+  })}`
 }
 
 export class ActionError extends Error {

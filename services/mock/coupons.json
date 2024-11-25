@@ -1,0 +1,183 @@
+[
+    {
+      "id": "1",
+      "title": "Weekend Getaway",
+      "description": "Enjoy a relaxing weekend.",
+      "longDescription": "Spend a peaceful weekend in a luxurious resort with all amenities included.",
+      "price": 299,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img1.png"
+    },
+    {
+      "id": "2",
+      "title": "Spa Day",
+      "description": "Relax and rejuvenate.",
+      "longDescription": "A full day of pampering with massages, facials, and more.",
+      "price": 150,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img2.png"
+    },
+    {
+      "id": "3",
+      "title": "Wine Tasting Tour",
+      "description": "Taste exquisite wines.",
+      "longDescription": "A guided tour through scenic vineyards with exclusive wine tastings.",
+      "price": 75,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img3.png"
+    },
+    {
+      "id": "4",
+      "title": "Adventure Park Pass",
+      "description": "Thrilling outdoor activities.",
+      "longDescription": "Access to zip lines, rope courses, and other exciting attractions.",
+      "price": 50,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img4.png"
+    },
+    {
+      "id": "5",
+      "title": "Cooking Class",
+      "description": "Learn to cook delicious meals.",
+      "longDescription": "A hands-on experience with a professional chef.",
+      "price": 120,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img5.png"
+    },
+    {
+      "id": "6",
+      "title": "Concert Tickets",
+      "description": "Experience live music.",
+      "longDescription": "Enjoy a night of live music from your favorite band.",
+      "price": 80,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img6.png"
+    },
+    {
+      "id": "7",
+      "title": "Fitness Bootcamp",
+      "description": "Push your limits.",
+      "longDescription": "A high-intensity workout session for all fitness levels.",
+      "price": 30,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img1.png"
+    },
+    {
+      "id": "8",
+      "title": "Photography Workshop",
+      "description": "Capture stunning images.",
+      "longDescription": "Learn techniques from professional photographers.",
+      "price": 200,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img2.png"
+    },
+    {
+      "id": "9",
+      "title": "City Tour",
+      "description": "Explore the city's landmarks.",
+      "longDescription": "A guided tour with stops at historic and cultural sites.",
+      "price": 40,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img3.png"
+    },
+    {
+      "id": "10",
+      "title": "Movie Night Package",
+      "description": "Enjoy a movie at home.",
+      "longDescription": "Includes snacks, drinks, and a voucher for a movie rental.",
+      "price": 25,
+      "pax": 4,
+      "imgUrl": "/assets/img/coupons/img4.png"
+    },
+    {
+      "id": "11",
+      "title": "Hot Air Balloon Ride",
+      "description": "Soar above the clouds.",
+      "longDescription": "A breathtaking experience with panoramic views.",
+      "price": 350,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img5.png"
+    },
+    {
+      "id": "12",
+      "title": "Art Class",
+      "description": "Unleash your creativity.",
+      "longDescription": "A fun and engaging painting or sculpting class.",
+      "price": 60,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img6.png"
+    },
+    {
+      "id": "13",
+      "title": "Zoo Admission",
+      "description": "See amazing animals.",
+      "longDescription": "A day pass to the zoo with educational tours included.",
+      "price": 20,
+      "pax": 4,
+      "imgUrl": "/assets/img/coupons/img1.png"
+    },
+    {
+      "id": "14",
+      "title": "Escape Room Challenge",
+      "description": "Solve the mystery.",
+      "longDescription": "A team-based puzzle game in a themed escape room.",
+      "price": 100,
+      "pax": 5,
+      "imgUrl": "/assets/img/coupons/img2.png"
+    },
+    {
+      "id": "15",
+      "title": "Boat Cruise",
+      "description": "Sail into the sunset.",
+      "longDescription": "A relaxing cruise with stunning ocean views.",
+      "price": 150,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img3.png"
+    },
+    {
+      "id": "16",
+      "title": "Music Lessons",
+      "description": "Learn a new instrument.",
+      "longDescription": "Private or group sessions with a music instructor.",
+      "price": 50,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img4.png"
+    },
+    {
+      "id": "17",
+      "title": "Comedy Night Tickets",
+      "description": "Laugh out loud.",
+      "longDescription": "An evening of entertainment with top comedians.",
+      "price": 35,
+      "pax": 2,
+      "imgUrl": "/assets/img/coupons/img5.png"
+    },
+    {
+      "id": "18",
+      "title": "Yoga Retreat",
+      "description": "Find your inner peace.",
+      "longDescription": "A weekend retreat focused on mindfulness and relaxation.",
+      "price": 400,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img6.png"
+    },
+    {
+      "id": "19",
+      "title": "Cooking Ingredients Box",
+      "description": "Cook gourmet meals at home.",
+      "longDescription": "A box with fresh ingredients and recipes for a complete meal.",
+      "price": 60,
+      "pax": 4,
+      "imgUrl": "/assets/img/coupons/img1.png"
+    },
+    {
+      "id": "20",
+      "title": "Surfing Lessons",
+      "description": "Ride the waves.",
+      "longDescription": "Beginner to advanced lessons with experienced instructors.",
+      "price": 90,
+      "pax": 1,
+      "imgUrl": "/assets/img/coupons/img2.png"
+    }
+  ]
+  

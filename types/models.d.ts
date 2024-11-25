@@ -4,7 +4,7 @@
  * Description: Interview test - React / Next.JS - For Rouge Hexagone
  */
 
-declare type ActionStatusMsg = 
+declare type ActionStatusMsg =
     | 'success'
 
 declare type StatusCode =
@@ -21,3 +21,28 @@ declare type ActionStatus = {
 }
 
 declare type ActionResponse<T> = [error?: ActionStatus, data?: T];
+
+declare type ArrayResponse<T> = {
+    total: number;
+    data: T[];
+}
+
+declare type PageProps = {
+    params: {
+        [x: string]: string;
+    },
+    searchParams: {
+        [x: string]: string;
+    }
+}
+
+/* DB Model */
+declare type Coupon = {
+    id: string;
+    title: string;
+    description: string;
+    longDescription?: string;
+    price: number;
+    pax: number;
+    imgUrl: string;
+}

@@ -4,10 +4,12 @@
  * Description: Interview test - React / Next.JS - For Rouge Hexagone
  */
 
+import TCouponListing from "@/components/templates/TCouponListing";
+
 export default function Home() {
   return (
     <>
-      kjmlkjmljmlkj
+      <TCouponListing />
     </>
 
   );

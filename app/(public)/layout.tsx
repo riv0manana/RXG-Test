@@ -13,7 +13,7 @@ const PublicLayout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Header />
-      <main className="container">
+      <main>
         {children}
       </main>
       <Footer />
