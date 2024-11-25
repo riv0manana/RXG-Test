@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import Logo from "@/components/atoms/Logo/Logo";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 export type HeaderProps = {
     className?: string;

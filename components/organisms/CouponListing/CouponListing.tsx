@@ -8,7 +8,6 @@ export type CouponListingProps = {
 }
 
 const CouponListing = ({
-    total = 0,
     items = [],
     className,
 }: CouponListingProps) => {

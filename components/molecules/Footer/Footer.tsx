@@ -5,7 +5,6 @@
  */
 
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
 import { useTranslations } from "next-intl";
 import Logo from "@/components/atoms/Logo/Logo";
 import FooterLink from "@/components/atoms/FooterLink/FooterLink";
@@ -13,12 +12,10 @@ import BankCardLogo from "@/components/atoms/BankCardLogo/BankCardLogo";
 import SocialLinks from "@/components/atoms/SocialLinks/SocialLinks";
 
 export type FooterProps = {
-    children?: ReactNode;
     className?: string;
 }
 
 const Footer = ({
-    children,
     className
 }: FooterProps) => {
     const t = useTranslations('components.molecules.Footer');

@@ -20,16 +20,16 @@ const isXSSSafe = (input?: string): boolean => {
 const safeString = (str: z.ZodString, t?: any) => str
     .refine(isXSSSafe, { message: t?.('xss') })
 
-const safeOptionalString = (str: z.ZodOptional<z.ZodString>, t?: any) => str
+export const safeOptionalString = (str: z.ZodOptional<z.ZodString>, t?: any) => str
     .refine(isXSSSafe, { message: t?.('xss') })
 
-const zodString = (t?: any) => z.string({
+export const zodString = (t?: any) => z.string({
     required_error: t?.('required')
 })
 
-const zodOptionalString = () => z.string().optional();
+export const zodOptionalString = () => z.string().optional();
 
-const zodPassword = (t?: any) => safeString(zodString(t)
+export const zodPassword = (t?: any) => safeString(zodString(t)
     .regex(/^.{8,}$/, { message: t?.('password.minus', { min: 8 }) })
     .regex(/.*[a-z].*/, { message: t?.('password.minus') })
     .regex(/.*[A-Z].*/, { message: t?.('password.capital') })
@@ -39,5 +39,7 @@ const zodPassword = (t?: any) => safeString(zodString(t)
     }),
     t);
 
-const zodPhone = (t?: any) => safeString(zodString(t)
+export const zodPhone = (t?: any) => safeString(zodString(t)
     .regex(/^0\d{9}$/, { message: t?.('phone') }), t);
+
+
