@@ -18,7 +18,7 @@ const CouponCard = ({
     const t = useTranslations('components.molecules.CouponCard')
 
     return (
-        <li className={cn("list-none w-full max-w-[385px] h-[520px] rounded-[20px] bg-white hover:shadow-[0px_60px_50px_#0000001A]", className)}>
+        <li className={cn("list-none w-full max-w-[385px] h-[520px] rounded-[20px] border border-custom-lightgray hover:border-none transition-all ease-in-out bg-white hover:shadow-[0px_60px_50px_#0000001A]", className)}>
             <Image
             loading={isLCP ? 'eager' : 'lazy'}
             priority={isLCP}

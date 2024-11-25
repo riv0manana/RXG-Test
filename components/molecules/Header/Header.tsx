@@ -16,7 +16,6 @@ const Header = ({
     <header className={cn('container pt-[35px] mb-[50px] flex flex-col gap-4 md:flex-row items-center md:justify-between', className)}>
         <Logo className="w-52" />
         {children}
-        <Button variant={'outline'}>dfsljl</Button>
     </header>
   )
 }
