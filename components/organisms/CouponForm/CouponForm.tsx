@@ -23,7 +23,10 @@ const CouponForm = () => {
 
     const form = useForm<z.infer<typeof orderSchema>>({
         resolver: zodResolver(orderSchema),
-        mode: 'onBlur'
+        mode: 'onBlur',
+        defaultValues: {
+            model: 1,
+        }
     })
 
     const handleSubmit = (data: z.infer<typeof orderSchema>) => {
